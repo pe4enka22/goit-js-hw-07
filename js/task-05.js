@@ -4,5 +4,5 @@ const textEl = document.querySelector('h1');
 inputEl.addEventListener('input', onInput);
 
 function onInput(event) {
-    if (event.currentTarget.value.length >= 1) { textEl.textContent = event.currentTarget.value } else { textEl.textContent = 'незнакомец'};
+    if (event.currentTarget.value.length >= 1) { textEl.textContent = "Привет," + event.currentTarget.value } else { textEl.textContent = 'незнакомец'};
 }

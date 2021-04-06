@@ -7,15 +7,28 @@ const ingredients = [
   'Приправы',
 ];
 
+const ingredientSet = document.querySelector('#ingredients');
 
-
-
-for (let i = 0; i < ingredients.length; i++) { 
+const makeElements = items => {
+  return items.map(item => {
     const ingredientEl = document.createElement('li');
-    ingredientEl.textContent = ingredients[i];
-    
-    const ingredientSet = document.querySelector('#ingredients');
-    ingredientSet.append(ingredientEl);
+    ingredientEl.textContent = item;
+
+    return ingredientEl;
+  });
 }
+
+const el = makeElements(ingredients);
+ingredientSet.append(...el);
+
+
+
+//for (let i = 0; i < ingredients.length; i++) {
+  //  const ingredientEl = document.createElement('li');
+    //ingredientEl.textContent = ingredients[i];
+    
+   // const ingredientSet = document.querySelector('#ingredients');
+    //ingredientSet.append(ingredientEl);
+//}
 
 
